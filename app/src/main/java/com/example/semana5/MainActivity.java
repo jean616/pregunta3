@@ -5,6 +5,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.view.Menu;
@@ -34,13 +35,18 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.item1 :
-                Toast.makeText(getApplicationContext(),"nodisponible skills",Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getApplicationContext(),MainActivity2.class);
+                startActivity(intent);
                 return true;
             case R.id.item2 :
-                Toast.makeText(getApplicationContext(),"nodisponible objetos",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),"oculto1",Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.item3:
-                Toast.makeText(getApplicationContext(),"nodisponible quests",Toast.LENGTH_LONG).show();
+                Intent intent1 = new Intent(getApplicationContext(),MainActivity3.class);
+                startActivity(intent1);
+                return true;
+            case R.id.item4:
+                Toast.makeText(getApplicationContext(),"oculto2",Toast.LENGTH_SHORT).show();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
